@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+    <h1>Movie Review Sentiment Analysis</h1>
+    <form action="/predict" method="POST">
+        <label for="review_text">Enter your movie review:</label><br><br>
+        <textarea id="review_text" name="review_text" rows="5" cols="40" placeholder="Type your review here..."></textarea><br><br>
+        <button type="submit">Predict Sentiment</button>
+    </form>
+    <br>
+    {% if prediction %}
+    <h2>{{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
